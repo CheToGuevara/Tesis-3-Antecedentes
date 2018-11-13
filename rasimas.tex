@@ -1,0 +1,156 @@
+\subsubsection{RASIMAS}
+\label{art:rasimas}
+
+\todo{Aunque aquí hagas una pequeña descripción, es importante que describas la RA y la Radiología diagnostica en el estado del arte. Deben ir los pasos detallados del procedimiento. Pon alguna cita, aquí y en el estado del arte. Por ejemplo, el CV de RA de Cork. Esto luego lo usaras en el courseware}
+
+The utility of ultrasound-guided RA as an alternative to electrical nerve stimulation has
+increased in popularity over the past 5 years. The use of ultrasound imaging for nerve
+localization is an innovative application of an old technology that addresses some of the
+shortcomings of the traditional electrical nerve stimulation techniques. The single most
+important advantage of ultrasound for nerve blocks is the ability to confirm local anaesthetic
+spread around the target nerve. Besides imaging the needle and nerve, ultrasound clearly
+reveals the surrounding hazardous structures, including blood vessels, pleura, and viscera
+
+Performing RA follows a full procedure that may be unknown to non anaesthesiologists. In
+order to give an overview of this procedure, the outlines of an US guided single-shot FNB
+has been characterised in the following. The objective of this characterisation is to inform non 
+
+anaesthesiologists of the project as to the required functionality of a procedural skills trainer
+relevant to peripheral nerve block. This description commences once the patient and
+equipment has been appropriately positioned and prepared, vital signs monitoring attached
+and intravenous access established. The description finishes once the local anaesthetic has
+been injected. There are important components of ultrasound guided femoral nerve block
+which occur before and following the needling procedure itself. These may indeed need to be
+included in a truly valid description of the procedure, however for the purposes of this
+characterisation, the description will focus on the above start and end points (Fig. 1).
+
+
+In the case of US guided training, on entering the training function, Dr ABC is prompted to
+interact with the haptic devices within the VR environment. Dr ABC is then guided through
+the key-enabling skills relevant to ultrasound-guided femoral nerve block as follows:
+1. Scout scan
+2. Optimisation of obtained image (PART manoeuvre)
+3. Identification of anatomical features of interest
+4. Immobilisation of probe and selection of needle insertion site
+5. Insertion of needle and advancement of needle-in-plane toward the target, while needle
+tip and shaft are visualised
+6. Halting needle advancement at the ‘appropriate’ location
+7. Injecting local anaesthetic and correctly identifying the pattern of spread as satisfactory or
+unsatisfactory.
+
+\subsubsection{Objetivos del simulador}
+Simulator: general principles
+The user needs for both procedures detailed above allow us to extract the general principles
+for the simulator. This section provides therefore general guidelines for the design of the
+simulator. In a process to anticipate the step of the design of the simulator, a list of possible
+features is already proposed in a second step.
+6.1 Description
+6.1.1 Objective
+1. To enable novice anaesthetists acquire and develop the necessary procedural skills to
+perform proficiently a simulated ultrasound-guided or nerve stimulation-based local nerve
+block, prior to performing regional anaesthesia in the clinical arena (starting with the
+femoral nerve block, additional blocks and/or nerve localisation techniques to follow on
+subsequent iterations).
+2. To permit anaesthetists who have been out of the clinical practice of ultrasound-guided or
+nerve stimulation-based nerve block for some time to relearn the procedural skills
+necessary to perform this technique and to define the point that proficient performance
+has been attained.
+3. To assess performance metrics associated with proficient performance of ultrasoundguided
+and nerve stimulation-based nerve blocks.
+4. To allow regional anaesthesia programme directors monitor trainee performance over
+time
+6.1.2 Location of use
+We intend providing the virtual reality simulator for regional anaesthesia to a large audience.
+To allow a broad spectrum of anaesthetists using the simulator as training tool, the simulator
+need to be relatively inexpensive, facilitate uncomplicated use, robust and reasonable small
+with limited need of maintenance. Specifically, the simulator should be primarily used in:
+1. Academic teaching hospitals
+2. Colleges of Anaesthesia (or equivalent professional training bodies)
+3. Academic institutions investigating procedural skills training
+6.1.3 Principles of use
+1. RASim must be contextually relevant and function within the existing or evolving regional
+anaesthesia curriculum
+2. RASim training must be based upon appropriately detailed characterised procedures
+3. RASim training must allow the development of relevant procedural skills and associated
+clinical decision making
+4. RASim training must never allow the development of procedural skill relevant only within
+the simulation environmentRASim training should allow performance related feedback, repeated practice and
+performance tracking and progression over time each based on precisely defined metrics
+6. RASim based training programmes must have a defined beginning and end (entry and
+exit) constituting proficiency based progression for defined applications e.g. independent
+practice , supervised practice
+6.2 Features
+Anticipating the next step consisting in designing the future VR platform, a non-exhaustive
+list of possible features for the simulator have been extracted based on the user needs, for
+which technological choices will have to be made. The features are grouped in tables by
+themes as follows:
+General features
+Working space
+Virtual patient
+Visualisation features
+Electric Nerve Stimulation features
+US guidance features
+Haptic feedback features
+Assessment \& Education features
+Portability features
+US guidance procedure
+Electrical stimulation guidance procedure
+Software/Hardware features
+
+% Logic
+% This section analyses the logic of the Guided Mode. The Courseware is implemented
+% as a finite state machine and we detail the events that are tracked in order to know,
+% during the simulation, which is the current stage of the procedure to gather the
+% appropriate metrics and to display appropriate supportive information. In this section,
+% we explain the events associated with: the assessment metrics (GM.AM.XX), the
+% error messages (GM.ER.XX) and the information displayed on user demand
+% (GM.IUD.XX). Additional information on the error metrics is detailed in Section 4.1.2
+% and further information on error messages and on information displayed on users
+% demand can be found in Section 4.1.3.
+% With the aim of facilitating the read of this section the states of the system are divided
+% in three phases: Scan-scout, needle guidance and injection.
+% Scan-scout:
+% GM.Scan.1. Welcoming and Theatre Preparation. The patient and the US
+% machine have to be positioned appropriately in the room. The 
+
+% application shows a video explaining this concept. The users can
+% replay the video as many times as they need. The stage ends when
+% the users close the window where the video is displayed. This stage
+% neither records any metrics, nor provides additional feedback.
+% GM.Scan.2. Ultrasound Machine Configuration. The users select the
+% appropriate US machine configuration values and turn the US
+% machine on. Then the users click on the “Continue” button. The
+% courseware does not let the user jump into the next step until
+% appropriate values are set.
+% i. Error messages: GM.ER.01.
+% ii. Information on user demand: GM.IUD.01.
+% iii. Assessment metrics: GM.AM.01, GM.AM.02, GM.AM.42.
+% GM.Scan.3. Aseptic technique. The application shows a video explaining this
+% concept. The users can replay the video as many times as they
+% need. The stage ends when the users close the window where the
+% video is displayed. This stage neither records any metrics, nor
+% provides additional feedback.
+% GM.Scan.4. Transducer above the inguinal crest. The users are asked to
+% place the ultrasound probe over the inguinal crest. The simulation
+% jumps into the next step if the users place the US transducer over
+% the iliac crest for 1,5 seconds.
+% i. Error messages: GM.ER.02.
+% ii. Information on user demand: GM.IUD.02, GM.IUD.03.
+% iii. Assessment metrics: GM.AM.03, GM.AM.04, GM.AM.42.
+% GM.Scan.5. Placing the transducer on patient skin. The users are asked to
+% place the US probe on the patient skin. In order to have a cross
+% sectional view of the relevant anatomy, they must check the US
+% rotation, alignment and tilt. The system jumps into the next step
+% when the probe is touching the correct anatomical area for 1,5
+% seconds.
+% i. Error messages: GM.ER.02, GM.ER.03, GM.ER.04, GM.ER.05.
+% ii. Information on user demand: GM.IUD.02, GM.IUD.03.
+% iii. Assessment metrics: GM.AM.03, GM.AM.04, GM.AM.05,
+% GM.AM.06, GM.AM.07, GM.AM.42.
+% GM.Scan.6. Sidedness Check. The users check if the probe sidedness is
+% correct moving the transducer laterally on the patient skin. The
+% users click on the “Continue” button after adjusting the probe
+% sidedness. The system does not allow stepping into the next stage
+% until the users adjust correct probe sidedness.
+% i. Error messages: GM.ER.02, GM.ER.03, GM.ER.04, GM.ER.05,
+% GM.ER.06.
