@@ -1,0 +1,35 @@
+\subsection{Diagnóstico por imagen médica}
+\label{art:xraysim}
+
+Dentro de la medicina, hay multitud de técnicas y procesos que generan imágenes médicas del paciente que se utilizan para el diagnóstico de enfermedades, afecciones o dolencias. Existen multitud de técnicas anteriormente mencionadas (\ac{US}, \ac{TC}, \ac{IRM}, etc.) según la tecnología en las que están basadas. Esto caracteriza su utilización dependiendo de que tejidos o que imágenes se capturan del cuerpo del paciente. 
+
+En el segundo caso de uso que se presenta en esta tesis esta orientado al diagnóstico por imagen generados con rayos X. Esta especialidad médica se centra en la generación e interpretación de imágenes que se consiguen al exponer la anatomía objetivo a una radiación electromagnética que será recogido por un detector. Antiguamente, se proyectaba sobre películas fotográficas especialmente preparadas para la fuente emisora. Sin embargo, actualmente la mayoría de imágenes son almacenadas digitalmente gracias a un detector que permiten guardarlas directamente en un computador.
+
+Se denomina proyecciones radiológicas al procedimiento de situar tanto al paciente como el equipo de radiología para conseguir una imagen de una parte concreta de la anatomía del paciente. Esta técnica define una proyección por cada parte del cuerpo a diagnosticar, y requiere por cada procedimiento una postura del paciente y configuración del equipo de radiografía concreto.
+
+Según el libro \cite{manualpractico}, el procedimiento habitual que se debe seguir se resume en los siguientes pasos:
+\begin{enumerate}
+    \item Elección de \emph{bucky}: Elemento para reducir la radiación no perpendicular al detector. Este filtro suele utilizarse siempre, excepto en condiciones de emergencia o limitaciones físicas.
+    \item Tamaño del chasis y orientación: Colocar el detector de la manera que permita cubrir la anatomía a estudiar.
+    \item Posición del paciente: Teniendo en cuenta las limitaciones del paciente, se debe posicionar al paciente de pie, sentado o decúbito.
+    \item Posición de la región anatómica: 
+    Se colocará al paciente de tal forma que la región objeto de estudio se situé correctamente centrado respecto al chasis.
+    \item Distancia foco película: Se sitúa el emisor de rayos X a la distancia adecuada para la proyección.
+    \item Angulación: Existen algunas proyecciones donde el chasis se inclina para evitar superposición de estructuras.
+    \item Centraje: Se centra la proyección de los rayos X en el centro de la región anatómica a estudiar, para lo que es fundamental el conocimiento de la anatomía.
+    \item Colimación: Se reduce la apertura de la radiación para reducir la exposición del paciente.
+    \item Técnica aproximada: Se configurará la potencia del equipo de radiología con el objetivo de reducir los niveles de exposición a lo mínimo posible, manteniendo la calidad diagnóstica (principio ALARA del inglés \emph{As Low AS Reasonably Achievable}\cite{manualpractico}). 
+    \item Indicaciones al paciente: Ordenes al paciente en el momento de tomar la imagen.
+\end{enumerate}
+Al igual que se indica en el propio libro, esta metodología, y en concreto los valores de potencia de los emisores de radiación, no es estándar y es susceptible de variaciones, dependiendo generalmente del centro de trabajo, profesionales, escuelas, rendimiento y antigüedad de los equipos, etc. 
+
+En cuanto a la enseñanza de las proyecciones radiológicas, la forma más común de aprender diagnóstico por imagen son los archivos educativos. Son recopilaciones de imágenes médicas de pacientes reales acompañados normalmente del historial del paciente. En estos archivos, los estudiantes pueden buscar a través de la gran cantidad de casos bien documentados. Es habitual que, cada universidad, hospital o facultad, tengan sus propios repositorios. Adicionalmente, existen libros donde se pueden consultar recomendaciones y guías \cite{carver2012medical,manualpractico}.
+En la última década, cada vez más se publican estos recursos de manera \emph{online} donde cualquier radiólogo pueda consultar una enorme base de datos de imágenes de cualquier parte de la anatomía humana \cite{deshpande2017integrated}. 
+
+Actualmente, la educación se ha visto beneficiada por la incorporación de los teléfonos inteligentes en este ámbito. Algunas instituciones han creado aplicaciones donde los estudiantes pueden revisar e investigar los casos almacenados, realizar cuestionarios y mejorar el aprendizaje como es el caso de la aplicación \emph{UBC Radiology} \cite{Spouge2017}. Estos recursos se encuentran muy presentes en el aprendizaje de los radiólogos noveles.
+
+Tanto estos recursos como los archivos educativos mantienen el mismo problema: las imágenes registradas son estáticas, y la mayoría de estas imágenes corresponden a imágenes que se presuponen que son correctas y no muestran ningún tipo de fallo. Esto es completamente entendible, ya que al hacer este tipo de recursos se seleccionan aquellas imágenes que sean beneficiosas para el estudiante. Además, en estos recursos, ninguna imagen pertenece al mismo paciente por razones de seguridad. No es posible ver la misma anatomía u otras partes del mismo sujeto, que puedan mostrar diferentes situaciones al estudiante. Aun así, posicionar bien al paciente mientras se realiza el diagnóstico por imagen es algo imprescindible y algo necesario que el estudiante domine. 
+
+Por otra parte, las mejoras en el rendimiento de los computadores permiten crear nuevos simuladores que mejoran y reducen el tiempo de aprendizaje de los estudiantes. Un caso remarcable es el  ProjectionVR$^{TM}$ \cite{shanahan2016student}. Este simulador trata de introducir al usuario dentro de un entorno realista 3D que replica una sala de radiología con el objetivo de simular el procedimiento completo. Con datos de pacientes reales digitalizados, el simulador replica un entorno de aprendizaje sin el consecuente riesgo de radiación que significaría exponer a los estudiantes o los pacientes. Aunque provee una cantidad amplia de datos médicos, los datos que contienen son estáticos y los usuarios no pueden variarlos o modificarlos en el simulador. También es notable mencionar la herramienta \emph{medspace.VR} \cite{medspace}. Este simulador proporciona un escenario virtual muy realista que ayuda al usuario a practicar el procedimiento de manera sistemática. Aun así, solo presenta un paciente virtual que únicamente contiene los tejidos de la piel y los huesos, sin ningún otro modelo interno que pueda ayudar a la correcta identificación de la anatomía del paciente.
+
+%https://www.bluephantom.com/product/Sciatic-Nerve-Regional-Anesthesia-Ultrasound-Training-Model.aspx?cid=428

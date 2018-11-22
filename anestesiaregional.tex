@@ -1,5 +1,7 @@
-\subsubsection{RASIMAS}
+\subsection{Anestesia regional}
 \label{art:rasimas}
+
+En cuanto a la especialidad de anestesiología, la anestesia espinal y la epidural son los dos ejemplos más frecuentes dentro de la \ac{RA} y podemos encontrar simuladores específicos \cite{broom2018evaluation}. Sin embargo, la búsqueda de un simulador de \ac{RA} genérico es más complicada.
 
 \todo{ es importante que describas la RA y la Radiología diagnostica en el estado del arte. Deben ir los pasos detallados del procedimiento. Pon alguna cita en el estado del arte. Por ejemplo, el CV de RA de Cork. Esto luego lo usaras en el courseware}
 
@@ -8,28 +10,16 @@ La \acl{RA}(\acs{RA}) guiada por \acl{US}(\acs{US}) representa una alternativa a
 \begin{figure}[h]
    \centering
     \includegraphics[width=0.5\textwidth]{IMG/RAUS.png}
-    \caption{ Anestesia regional guiada por \acl{US}}
+    \caption{ Anestesia regional guiada por \acl{US}.}
    \label{fig:raus}
 \end{figure}
 
 La ejecución de este procedimiento no es sencillo para aquellos profesionales de anestesiología que no están familiarizados con las técnicas de \ac{US}. Además de los conocimientos teóricos, los profesionales deben entrenar sus habilidades no cognitivas. Estos entrenamientos habitualmente se practican con paciente reales, con la utilización de cadáveres\cite{Tsui2007} o el uso de \emph{fantomas}\cite{phantomra}. La incorporación de un simulador en el entrenamiento del procedimiento ayudará a solventar las limitaciones de los entrenamientos clásicos al ser más barato, repetible y seguro.
 
-El proyecto \ac{RASimAs} tiene como objetivo \new{el} de facilitar el entrenamiento y la práctica de la \ac{RA} con la ayuda de un simulador (\ac{RASim}) y un asistente (\ac{RAAs}).
-Para que sea utilizado en el mayor número de sitios posibles (hospitales, universidades y colegios profesionales) se debe proporcionar una herramienta de entrenamiento que sea barata, fácil de usar, robusta y que necesite poco mantenimiento.
-Estas herramientas están dirigidas para diferentes perfiles de usuarios.  Tanto estudiantes como profesionales que están empezando a realizar el procedimiento, el simulador les proporcionará un método de entrenamiento con el que mejorar sus habilidades cognitivas y propioceptivas. A su vez, este proyecto también está orientado para profesionales anestesistas que han estado alejados de la práctica del procedimiento y quieran retomar la actividad.
-Los objetivos principales del simulador \ac{RASim} son los siguientes:
-\begin{enumerate}
-    \item Un estudiante de \new{anestesista} \del{anestesista} adquiera y desarrolle las habilidades cognitivas y no cognitivas que le permitan ejecutar un bloque de nervio guiado por \ac{US} empezando por el bloqueo del nervio femoral y siguiendo con las siguientes localizaciones.
-    \item Permitir a un anestesista retomar y practicar las habilidades necesarias para realizar el procedimiento de forma segura y satisfactoria.
-    \item Recuperar y medir métricas de rendimiento al realizar el procedimiento en el simulador. 
-    \item Permitir a un supervisor revisar las métricas registradas por los usuarios del simulador a través del tiempo
-\end{enumerate}
-
-
 
 Según (entregable 2.1 \cite{rasimasweb}), el procedimiento de \ac{RA} guiado por \ac{US} se puede definir con los siguientes bloques:
 \begin{enumerate}
-    \item Exploración (\emph{Scout Scan}): El profesional configura y explora con la sonda de \ac{US} la zona del paciente con el objetivo de identificar el nervio, la arteria principal y las demás estructuras importantes (figura \ref{fig:scoutscan}). 
+    \item Exploración (\emph{Scout Scan}): El profesional configura y explora con la sonda de \ac{US} la zona del paciente con el objetivo de identificar el nervio, la arteria principal y las demás estructuras anatómicas importantes (figura \ref{fig:scoutscan}). 
 \begin{figure}[th]
    \centering
     \includegraphics[width=0.9\textwidth]{IMG/scoutscan.png}
@@ -65,6 +55,31 @@ El anestesista deberá posicionarse en la sala de tal forma que su ángulo de vi
     \caption{ }
    \label{fig:roomplace}
 \end{figure}
+
+
+En cuanto a la existencia de simuladores de \ac{RA}, se pueden encontrar algunos ejemplos en la bibliografía. Por ejemplo, Energid Technologies ha desarrollado  un simulador en un contrato con el Ejército de Estados Unidos, pero no ha sido comercializado al público \cite{lim2008simulation}.
+Otro simulador, en este caso comercial, llamado SAILOR es distribuido acompañado de un atlas multimedia de los bloqueos de nervios. Este simulador presenta solo un único modelo de paciente, y su interacción es exclusivamente con el ratón sin ninguna tipo de deformación del tejido\cite{Bibin}. 
+
+En un estudio previo al proyecto \ac{RASimAs}, se demostró la aceptación que tendría un simulador para la \ac{RA}. Todos los participantes se mostraron muy receptivos con el trabajo realizado pero, sin embargo, se pudo constatar la escasez de nervios para bloquear, la pobre simulación de los ultrasonidos y la ausencia de respuesta háptica \cite{Grottke2009594}.
+
+%https://www.gtsimulators.com/Full-Body-X-Ray-Phantom-with-Real-Human-Skeleton-p/ez7200.htm
+
+
+
+
+El proyecto \ac{RASimAs} tiene como objetivo  facilitar el entrenamiento y la práctica de la \ac{RA} con la ayuda de un simulador (\ac{RASim}) y un asistente (\ac{RAAs}).
+Para que sea utilizado en el mayor número de sitios posibles (hospitales, universidades y colegios profesionales) se debe proporcionar una herramienta de entrenamiento que sea barata, fácil de usar, robusta y que necesite poco mantenimiento.
+Estas herramientas están dirigidas para diferentes perfiles de usuarios.  Tanto estudiantes como profesionales que están empezando a realizar el procedimiento, el simulador les proporcionará un método de entrenamiento con el que mejorar sus habilidades cognitivas y propioceptivas. A su vez, este proyecto también está orientado para profesionales anestesistas que han estado alejados de la práctica del procedimiento y quieran retomar la actividad.
+Los objetivos principales del simulador \ac{RASim} son los siguientes:
+\begin{enumerate}
+    \item Un estudiante de anestesia adquiera y desarrolle las habilidades cognitivas y no cognitivas que le permitan ejecutar un bloque de nervio guiado por \ac{US} empezando por el bloqueo del nervio femoral y siguiendo con las siguientes localizaciones.
+    \item Permitir a un anestesista retomar y practicar las habilidades necesarias para realizar el procedimiento de forma segura y satisfactoria.
+    \item Recuperar y medir métricas de rendimiento al realizar el procedimiento en el simulador. 
+    \item Permitir a un supervisor revisar las métricas registradas por los usuarios del simulador a través del tiempo
+\end{enumerate}
+
+
+
 
 
 
