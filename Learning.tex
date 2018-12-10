@@ -1,37 +1,11 @@
-\section{Entrenamiento con simuladores médicos}
+
+
+
+\subsubsection{Aprendizaje}
 \label{art:learning}
 
 
-%En anteriores secciones se ha revisado el uso de simuladores en medicina aunque es bien sabido que el uso en otro tipo de contextos no es nuevo. El principal objetivo de estos simuladores es garantizar la seguridad e intentar mejorar el aprendizaje y la respuesta antes errores poco comunes.
 
-En \cite{donaldson2000err} se cifra en cientos de miles las muertes ocurridas en hospitales estadounidenses como consecuencia de errores médicos, eso sin contar posibles otro tipo de daños a los pacientes que implican gastos económicos. En este libro se planteaba la necesidad de mejorar la formación de los profesionales para evitar este tipo de errores. 
-Es necesario también garantizar la seguridad y la intimidad de los pacientes durante el proceso de aprendizaje, lo cual lleva implícito la exigencia ética que representa el propio código deontológico del personal sanitario. 
-
-En el libro \cite{dent2017practical} se presenta una serie de objetivos que debería cumplir una institución de enseñanza médica al formular el currículum del personal sanitario.
-\begin{itemize}
-    \item Producir nuevos profesionales sanitarios.
-    \item Utilizar los procedimientos médicos modernos.
-    \item Cumplir la regulación gubernamental.
-    \item Asegurar que los estudiantes puedan completar el curso.
-    \item Satisfacer las expectativas de los pacientes.
-\end{itemize}
-
-Estos objetivos se enfrentan con una serie de problemas que han impulsado a las instituciones médicas a potenciar el uso de los simuladores.
-Por una parte,  desde hace décadas se vienen disminuyendo el tiempo de trabajo para los profesionales en formación, que a la vez reduce el tiempo con pacientes reales. Además,  ha habido cambios respecto a que un paciente sea objetivo de exploraciones y procedimientos redundantes con objeto de entrenar a estudiantes, siendo una molestia y constituyendo un peligro. También hay que añadir que movimientos por los derechos de los animales han hecho restringir el uso de estos con motivos de aprendizaje. Por otra parte, ciertas organizaciones han cambiado sus métodos de evaluaciones con acreditaciones y certificaciones frente a la clásica evaluación basada en el conocimiento exclusivamente.
-
-Otro motivo por el cual es necesario cambiar las formas de aprendizaje de la medicina, es debido a que estas también han evolucionado con el tiempo.
-Tradicionalmente, el plan de estudios de la medicina era incremental desde los aspectos más básicos hasta llegar a la especialización. Actualmente la medicina es tan extensa que el contenido del currículum se ha incrementado notablemente. Esto ha hecho que aparecieran escuelas para cada especialidad médica donde el conocimiento médico ha crecido exponencialmente en las últimas décadas y los métodos tradicionales de enseñanza no son completamente adecuados para manejar esa cantidad de material.
-
-Obligados a buscar alternativas para garantizar una exposición clínica variada y completa, junto con el desarrollo de la investigación en el campo de la simulación, los simuladores de \ac{RV} están aumentando su presencia dentro de los procesos de aprendizaje de los futuros médicos.
-
-Por consiguiente, los simuladores se han mostrado como métodos adicionales de enseñanza frente a los métodos tradicionales. Estas nuevas formas de aprendizaje deben ser validadas antes de su incorporación definitiva. A continuación, primero se comentarán una serie conceptos básicos de aprendizaje que han de tomarse en cuenta en el desarrollo y diseño de una herramienta de entrenamiento. Posteriormente, se presentarán los instrumentos habituales que se utilizan para probar y validar de forma objetiva estas herramientas.
-
-
-\subsection{Aprendizaje}
-
-Frente a un modelo asistencial en la formación de los estudiantes, los simuladores presentan  ventajas educativas que convierten estas herramientas en ideales para enfrentarse a los problemas anteriormente citados. Estas herramientas han demostrado que pueden reducir el tiempo de realización de una tarea, así como el número de errores cometidos y, además, siendo posible diferenciar entre expertos y novatos \cite{Gurusamy08}.
-
-Por otra parte, los simuladores permiten que el estudiante cometa errores sin las consecuencias reales que podrían resultar en un entorno con pacientes. El alumno se puede enfrentar a todo tipo de situaciones, desde las introductorias a las más complicadas donde errar no es crítico. También permite que el alumno reciba valoraciones y comentarios en tiempo real. Citando a \cite{ziv2008educacion}: "Los errores son experiencias de aprendizaje y ofrecen grandes oportunidades de mejorar a través del aprendizaje de los mismos". Adicionalmente, los simuladores presentan un entorno educativo estandarizado, reproducible y objetivo que permite una evaluación del estudiante constante.
 
 % Según \cite{pales2010uso}hay una serie de condiciones que van son necesarios para que los simuladores sean un método eficaz de enseñanza.
 
@@ -52,7 +26,7 @@ Por otra parte, los simuladores permiten que el estudiante cometa errores sin la
 %Deliberate Practice and the Acquisition and Maintenance of Expert Performance in Medicine and Related Domains Ericsson, K Anders
 %Deliberative practice «Ericsson»( practicar muchas horas no es suficiente, hay que practicar fijándose en las cosas a reforzar y en lo que hay que mejorar... y se requieren un número mínimo de horas para llegar a convertirse en experto, estas horas siempre va ser más barato entrenarlas con un simulador, una vez adquirido y descontado el coste inicial, por lo que un simulador es interesante cuando mucha gente la practicar muchas horas).
 
-Los simuladores no basan su eficiencia en la posibilidad de entrenar muchas horas, sino en cómo se entrena. Según \emph{Ericsson et al.} \cite{ericsson1993role}, la práctica de una misma habilidad durante un periodo largo de tiempo no es suficiente para llegar a ser un profesional, sino que es necesario enfocar de forma distinta los entrenamientos que simplemente repetir una y otra vez el ejercicio. \emph{Ericsson et al.} comenta que es necesario cambiar de enfoque y practicar fuera de la zona de confort. Además, también hace hincapié que la falta de una adecuada retroalimentación hace imposible un aprendizaje eficiente y no se producirán mejoras aunque los sujetos estén motivados. La motivación es algo fundamental en el entrenamiento, pues sin ella, el aprendizaje se ve ralentizado e incluso ser contraproducente. 
+Los simuladores no basan su eficacia solamente en la posibilidad de entrenar muchas horas, sino en la forma de como se entrena. Según \emph{Ericsson et al.} \cite{ericsson1993role}, la práctica de una misma habilidad durante un periodo largo de tiempo no es suficiente para llegar a ser un profesional, sino que es necesario enfocar de forma distinta los entrenamientos que simplemente repetir una y otra vez el ejercicio. \emph{Ericsson et al.} comenta que es necesario practicar fuera de la zona de confort. Por otra parte, la motivación es algo fundamental en el entrenamiento, pues sin ella, el aprendizaje se ve ralentizado e incluso ser contraproducente. Además, también hace hincapié que la falta de una adecuada retroalimentación hace imposible un aprendizaje eficiente y no se producirán mejoras aunque los sujetos estén motivados. 
 
 %\todo{comentamos diferencias entre evaluación formativa y sumativa} 
 Una característica fundamental de un simulador es la de proporcionar una realimentación útil al usuario acerca de su desempeño en el entrenamiento \cite{ericsson1993role}. Es habitual diferenciar dos tipos de retroalimentación \cite{Sando2013}: 
@@ -63,7 +37,7 @@ Una característica fundamental de un simulador es la de proporcionar una realim
 
 
 %ZPD zone of proximal development «vugotsky» ( cuando queremos aprender algo, necesitamos que sus conocimientos caigan dentro de lo que se llama la zona de desarrollo próximo, porque si es demasiado fácil lo que vamos a aprender no nos motiva, y si es demasiado difícil, nos descorazonamos). 
-En el aprendizaje también es importante tener en cuenta la \ac{ZPD}\cite{zpd}. Cuando diseñamos un entrenamiento, es necesario adecuar tanto el contenido como las habilidades necesarias al nivel que el estudiante posea. Diseñar el procedimiento demasiado complejo hará que el sujeto se desmotive y el aprendizaje no sea efectivo. De forma contraria, si las tareas son demasiado fáciles, el usuario no mostrará interés en el entrenamiento de sus habilidades.
+Otros autores \cite{zpd}, definen el concepto \ac{ZPD}. Cuando diseñamos una nueva herramienta de aprendizaje, es necesario adecuar tanto el contenido como las habilidades necesarias al nivel que el estudiante posea. Diseñar el procedimiento demasiado complejo hará que el sujeto se desmotive y el aprendizaje no sea efectivo. De forma contraria, si las tareas son demasiado fáciles, el usuario no mostrará interés en el entrenamiento de sus habilidades.
 %Además es más seguro para el paciente (patient safety).
 
 
@@ -73,57 +47,63 @@ El entrenamiento de un nuevo procedimiento también tiene que estar diseñado co
 
 
 %Decay of skills (para cuando ya saben y son expertos, pero al estar un tiempo sin practicar, para que puedan practicar con el simulador y así ponerse al día en las habilidades y que no decaigan).
-Es importante remarcar, que los simuladores no solo están orientados para el desarrollo de nuevos conocimientos y habilidades, sino también son útiles para la retención y readquisición de las aptitudes. Es habitual que los simuladores de \ac{RV} sean utilizados por profesionales que quieren mejorar o retomar la actividad clínica \cite{Atesok}, o sean un requisito para la renovación de las licencias, en el caso de los pilotos aéreos \cite{normativa}. 
+
 
 
 %Transferability of skills ( que lo aprendido como simulador, sea extrapolable a la situación real, en nuestro caso, a un quirófano)
 Otro aspecto fundamental al diseñar un nuevo simulador es la confirmación de la transferencia de habilidades entre el sistema y la situación real. Por tanto, es necesario una evaluación exhaustiva y controlada para comprobar la efectividad del entrenamiento al incorporar herramientas de \ac{RV}\cite{AIM2016224}.
 
-A pesar de todas las características anteriormente citadas que debería cumplir un entrenador efectivo, no necesariamente tiene que traducirse en la creación de un simulador complejo. En ocasiones no es necesario modelos demasiados complejos para el entrenamiento de determinadas habilidades. La simulación es una metodología docente, el simulador, sea de la complejidad que sea, un mero instrumento. Por lo tanto, para cada objetivo docente hay un modelo de simulador suficiente y apropiado. El mérito de un simulador no es su complejidad sino su utilidad y la frecuencia y aceptación para su uso por parte de los profesores y estudiantes. %No es recomendable basar toda la enseñanza en el uso de simuladores específicos.
+A pesar de todas las características anteriormente citadas que debería cumplir un entrenador efectivo, no necesariamente tiene que traducirse en la creación de un simulador complejo. En ocasiones no es necesario modelos demasiados complejos para el entrenamiento de determinadas habilidades. La simulación es una metodología docente, el simulador, sea de la complejidad que sea, un mero instrumento. Por lo tanto, para cada objetivo docente hay un modelo de simulador suficiente y apropiado. El mérito de un simulador no es su complejidad sino su utilidad y la frecuencia y aceptación para su uso por parte de los profesores y estudiantes.
+
+Es importante remarcar, que los simuladores no solo están orientados para el desarrollo de nuevos conocimientos y habilidades, sino también son útiles para la retención y readquisición de las aptitudes. Es habitual que los simuladores de \ac{RV} sean utilizados por profesionales que quieren mejorar o retomar la actividad clínica \cite{Atesok}, o sean un requisito para la renovación de las licencias, en el caso de los pilotos aéreos \cite{normativa}. 
+
+%No es recomendable basar toda la enseñanza en el uso de simuladores específicos.
 
 En la siguiente sección se introducirán las evaluaciones más habituales que se utilizan para validar los simuladores desarrollados para el entrenamiento médico.
 
 
 
-\subsection{Evaluación de simuladores médicos}
+\subsubsection{Evaluación de simuladores médicos}
+\label{art:evaluation}
 
-La inclusión de los simuladores médicos en los centros educativos no es inmediata. Dejando a un lado factores como su coste, los simuladores deben ser evaluados para comprobar su efectividad y su adecuación como nuevo método de aprendizaje. Es incluso más importante cuando serán los pacientes a los que le afectará las consecuencias del buen o mal entrenamiento.
-Adicionalmente, los métodos de evaluación tendrán que tomar en cuenta la diversidad que presentan los simuladores para asegurar que la evaluación sea válida, fiable y factible. 
-Cuantos más criterios de evaluación cumpla el nuevo método de enseñanza, más seguro se estará de que los resultados reflejarán el correcto desempeño de los estudiantes.
+La inclusión de los simuladores médicos en la formación de profesionales médico no es inmediata. Dejando a un lado factores como su coste, los simuladores deben ser evaluados para comprobar su efectividad y su adecuación como nuevo método de aprendizaje. En particular, los simuladores médicos son un caso especial ya que serán los pacientes los que se vean afectados por las consecuencias del buen o mal entrenamiento. Cuantos más criterios de evaluación cumpla el nuevo método de enseñanza, más seguro se estará de que los resultados reflejarán el correcto desempeño de los estudiantes.
+Es importante que los métodos de evaluación deben tener en cuenta la diversidad que presentan los simuladores para asegurar que la evaluación sea válida, fiable y factible. 
 
-Muchos autores toman como referencia de una buena evaluación el consenso establecido en  \cite{norcini2011criteria}, en la que se siguen los siguientes criterios para una buena evaluación.
+Muchos autores toman como referencia de una buena evaluación el consenso establecido en  \cite{norcini2011criteria}. Aunque muchos de estos criterios han sido descritos previamente, se incorporó el  \emph{efecto catalítico}. Los criterios son los siguientes:
 
 \begin{itemize}
-\item Validez: El simulador es válido para la tarea a la que ha sido diseñado. Existen diferentes tipos de validez que serán descritas en la siguiente sección.
-\item Reproducibilidad o consistencia: El simulador presenta la misma evaluación si es repetido en circunstancias similares. Es fiable.
+
+\item Reproducibilidad o consistencia: El simulador presenta la misma evaluación si es repetido en circunstancias similares. Es fiable sin depender de la situación.
 \item Equivalencia: Presenta la misma clasificación o puntuación a través de diferentes instituciones o análisis.
 \item Viabilidad: El simulador es práctico, realista y razonable dada las circunstancias y el contexto.
 \item Efecto educativo: El simulador motiva a los usuarios, consiguiendo un beneficio educativo.
-\item Efecto \emph{Catalytic}: El simulador aporta resultados y retroalimentaciones que crea, mejora y respalda la formación, e impulsa el aprendizaje.
+\item Efecto catalítico: El simulador aporta resultados y retroalimentaciones que crea, mejora y respalda la formación, e impulsa el aprendizaje.
 \item Aceptación: El simulador es bien acogido entre los responsables y los usuarios, y sus resultados son aceptados como verdaderos.
+
+\item Validez: El simulador es válido para la tarea a la que ha sido diseñado. Existen diferentes tipos de validez que serán descritas con detalle a continuación.
+
 \end{itemize}
 
-Muchos de estos criterios han sido descritos previamente, pero en \cite{norcini2011criteria}, se quiere hacer hincapié en el \emph{efecto catalítico}, ya que aquel instrumento de evaluación que consigue mejorar el aprendizaje además de hacer que el usuario se sienta cómodo con el instrumento es algo importante para el entrenamiento.
 
 
 
-\subsubsection{Validez}
+\paragraph{Validez}
 
-\todo{No puede haber un apartado con un único punto.}
-Los simuladores de \ac{RV} se deben evaluar para confirmar su utilidad como herramienta de aprendizaje y, por tanto, es necesario validar que realizan la tarea para lo que fueron diseñados. Estas validaciones tienen que ser constantes en el tiempo y en el lugar. 
-Citando \cite{pales2010uso}, se van a definir los siguientes tipos de validez:
+%\todo{No puede haber un apartado con un único punto.}
+Los simuladores de \ac{RV} se deben evaluar para confirmar su utilidad como herramienta de aprendizaje. La validez es un concepto que permite cuantificar de forma objetiva que un simulador es adecuado, correcto y cumple con el objetivo con el que fue diseñado.
+Estas validaciones tienen que ser constantes en el tiempo y en el lugar. Citando \cite{pales2010uso}, se van a definir los siguientes tipos de validez:
 \begin{itemize}
     \item Validez aparente:
     Esta validación se basa en la apariencia. Si los usuarios, tanto estudiantes como profesores, sienten que un simulador es similar, razonable y relevante al procedimiento que se pretende practicar, esto motivará el entorno de enseñanza y el aprendizaje. Esta validación está determinada por la respuesta dada por todos aquellos usuarios que están involucrados con la herramienta.
     
-    \item Validez de contenido: La herramienta presenta contenido relacionado con el procedimiento a simular. Los expertos aprueban si el contenido que se muestras es apropiado y especifico de aquellas habilidades que se quieren entrenar.
+    \item Validez de contenido: La herramienta presenta contenido relacionado con el procedimiento a simular. Los expertos aprueban si el contenido que se muestras es apropiado y especifico para aquellas habilidades que se quieren entrenar.
     Esta validación mide si el alcance de la herramienta es útil para el entrenamiento de los estudiantes.
     
         \item Validez de constructo.
     Consiste en garantizar que el simulador cumpla con los objetivos con el que fue diseñado. Por ejemplo, se debe comprobar que la nueva herramienta mejora las habilidades del usuario y por tanto su efectividad en el entrenamiento. 
     
     \item Validez concurrente.
-    Esta validación pretende comparar la puntuación resultante del simulador en evaluación con una herramienta ya establecida. Se procede a que el mismo conjunto de usuarios realicen las actividades de las dos herramientas, esperando una correlación entre ambos resultados.
+    Esta validación pretende comparar la puntuación resultante del simulador en evaluación con un método de aprendizaje ya establecido. Se procede a que el mismo conjunto de usuarios realicen las actividades utilizando los dos métodos, esperando una correlación entre ambos resultados.
 
     \item Validez predictiva:
     Con esta validación se pretende demostrar que una herramienta es capaz de predecir el desempeño de los usuarios. Se compara los resultados obtenidos con el simulador y las técnicas de aprendizaje ya establecidas. El simulador deberá pronosticar las diferencias existentes entre usuario (expertos frente a estudiantes) al igual que se producen en las herramientas de aprendizaje establecidas para ese procedimiento.  Tanto la validez predictiva como la validez concurrente, en ocasiones se consideran validez de criterio. 
