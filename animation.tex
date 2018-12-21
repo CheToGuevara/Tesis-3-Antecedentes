@@ -1,12 +1,12 @@
-\section{Animación de anatomía humana} 
+\section{Animación de la anatomía humana} 
 \label{art:anatomy}
 
 
 %\subsection{Introducción}
 
-Una de las necesidades básicas de un simulador es poder mostrar información anatómica de pacientes virtuales con las que trabajará el usuario. En  \cite{preim2018survey} se explica la necesidad de que los estudiantes tengan un conocimiento profundo de la anatomía humana, estructuras, su posición relativa, variabilidad, etc. Es fundamental que un médico cuente con esos conocimientos previamente a la realización del entrenamiento médico.
+Una de las necesidades básicas que debe cubrir un simulador es poder mostrar información anatómica de pacientes virtuales con las que trabajará el usuario. En  \cite{preim2018survey} se explica la necesidad de que los estudiantes tengan un conocimiento profundo de la anatomía humana, estructuras, su posición relativa, variabilidad, etc. Es fundamental que un médico cuente con esos conocimientos previamente a la realización del entrenamiento médico.
 
-Existen dos formas muy comúnmente utilizadas para representar modelos tridimensionales por computador. Lo más habitual es utilizar una malla poligonal, normalmente compuesta por triángulos o rectángulos (quads), comúnmente llamadas \ac{B-rep}. El principal inconveniente es que representa solo la superficie del modelo y no contiene información interna.  % \del{Esta malla generalmente está compuesta de polígonos llamados facetas o caras que son la unidad básica de un modelo tridimensional. Las caras más comunes son: triángulos, siendo este el polígono más simple; o rectángulos, que normalmente se descomponen en dos triángulos. El triángulo es la figura más utilizada debido a su menor complejidad matemática en los diferentes cálculos relacionados con la informática gráfica (interpolaciones, manejo de vecinos, etc.).}
+Existen dos formas comúnmente utilizadas para representar modelos tridimensionales por computador. Lo más habitual es utilizar una malla poligonal, normalmente compuesta por triángulos o rectángulos (quads), comúnmente llamadas \ac{B-rep}. El principal inconveniente es que representa solo la superficie del modelo y no contiene información interna.  % \del{Esta malla generalmente está compuesta de polígonos llamados facetas o caras que son la unidad básica de un modelo tridimensional. Las caras más comunes son: triángulos, siendo este el polígono más simple; o rectángulos, que normalmente se descomponen en dos triángulos. El triángulo es la figura más utilizada debido a su menor complejidad matemática en los diferentes cálculos relacionados con la informática gráfica (interpolaciones, manejo de vecinos, etc.).}
 %A lo largo del tiempo, las tarjetas gráficas se han diseñado con especial énfasis en el tratamiento de triángulos.
 Por otra parte, existe otro tipo de representación, llamada volumétrica, que permite una representación visual completa de un objeto tanto del exterior como del interior, que la representación poligonal no era capaz. Sin embargo, esto produce una gran complejidad al intentarlas representar mediante técnicas de imagen generada por computador.
 En la figura \ref{fig:HVP} se puede apreciar las dos representaciones del mismo modelo anatómico.
@@ -34,16 +34,18 @@ Por tanto, estos simuladores necesitarían un método que pueda tratar modelos v
 Es importante hacer mención al trabajo de  \emph{Dicko et al.}~\cite{Ali2013}.  En este artículo, los autores han desarrollado un método para modelar la anatomía interna de un paciente virtual, transfiriendo los tejidos internos de un modelo anatómico de referencia como \emph{ZygoteBody}$^{TM}$~\cite{kelc2012zygote} a un modelo registrado a partir de una imagen médica. Con esta técnica, es posible registrar y modelar los tejidos internos de datos obtenidos de \ac{IRM}. Al igual que en las técnicas de registro, en esta publicación se citan ciertos problemas con la interpretación de los tejidos adiposos. Este trabajo se centra solo en el proceso de registro y modelado sin detallar el proceso de animación utilizado. Tampoco mencionan como se realiza la etapa de \emph{rigging} y la de pesado que se detallarán en la siguiente sección.  
 
 
-En la siguiente sección, se presentarán una visión general de los diferentes algoritmos existentes para animar modelos tridimensionales. La animación consiste en deformar las representaciones superficiales \todo{quieres que utilice el termino b-rep?} o volumétricas por medio de modelos matemáticos. Estas técnicas suelen ser clasificadas en dos tipos: aquellas que tienen en cuenta las propiedades físicas del modelo y aquellas que solo utilizan operaciones geométricas para animar el modelo. Actualmente, es habitual que los algoritmos geométricos estén orientados a ser interactivos (sacrificando deformaciones físicamente correctas) frente a los algoritmos físicos centrados en una deformación más \del{realista} \new{plausible}. Aun así, existen algoritmos que combinan ambos enfoques para conseguir deformaciones más realistas con tasas interactivas, o reducir el tiempo de procesado mientras se mantiene el comportamiento físico. 
+En la siguiente sección, se presentarán una visión general de los diferentes algoritmos existentes para animar modelos tridimensionales de caracteres articulados. La animación consiste en deformar las representaciones superficiales 
+\todo{quieres que utilice el termino b-rep?. Marcos. Solo cuando quede bien}
+o volumétricas por medio de modelos matemáticos. Estas técnicas suelen ser clasificadas en dos tipos: aquellas que tienen en cuenta las propiedades físicas del modelo y aquellas que solo utilizan operaciones geométricas para animar el modelo. Actualmente, es habitual que los algoritmos geométricos estén orientados a ser interactivos (sacrificando deformaciones precisas desde un punto de vista físico físicamente correctas) frente a los algoritmos físicos centrados en una deformación más \del{realista} \new{plausible}. Aun así, existen algoritmos que combinan ambos enfoques para conseguir deformaciones más realistas con tasas interactivas, o reducir el tiempo de procesado mientras se mantiene el comportamiento físico. 
 
 
 \subsection{Animación esqueletal}
 \label{art:animation}
 \label{art:virtualskel}
 
-La animación esqueletal es un método geométrico que anima un modelo representado por su malla superficial, normalmente llamada piel, gracias a un esqueleto virtual. Asociando los vértices a los huesos virtuales, esta técnica permite transferir el movimiento del esqueleto a su piel. Esta técnica fue introducida por N. Magnenat Thalmann en 1988 \cite{thalmann88} y sigue siendo la técnica más utilizada debido a su sencillez y su fácil adaptación al cauce gráfico. A pesar de la existencia de métodos más realistas, esta técnica se usa prácticamente en todos los sistemas de animación ya que simplifica el trabajo de los artistas o es el paso previo a algoritmos más complejos. %Por ejemplo, se puede animar mediante captura de movimientos y cinemática inversa, entre otros.
+La animación esqueletal es un método geométrico que se utiliza para anima un modelo articulado representado por su malla superficial, gracias a un esqueleto virtual, asociando los vértices a los huesos virtuales. Esta técnica permite transferir el movimiento del esqueleto la representación superficial. Esta técnica fue introducida por N. Magnenat Thalmann en 1988 \cite{thalmann88} y sigue siendo la técnica más utilizada debido a su sencillez y su fácil implementación en el cauce gráfico actual. A pesar de la existencia de métodos más realistas, esta técnica se usa prácticamente en todos los sistemas de animación interactivos ya que simplifica el trabajo de los artistas (el número de grados de libertad del esqueloto virtual es mucho menor al numero de grados de liberta del la representación superficial) y es el paso previo a algoritmos más complejos. %Por ejemplo, se puede animar mediante captura de movimientos y cinemática inversa, entre otros.
 
-La técnica se basa en una abstracción matemática, un esqueleto virtual, que se utiliza para definir los puntos de rotación de las \ac{joints} de los modelos. Este esqueleto se define como un conjunto de huesos virtuales jerarquizados y se encuentran conectados entre sí. La figura \ref{fig:virtualskeleton} muestra como un esqueleto virtual está superpuesto a un paciente virtual. Las esferas grises representan los centros de rotación de los \emph{\ac{joints}}, mientras que, los prismas representan la relación de herencia entre ellos. Estos huesos están pensados para que el artista dirija los movimientos del personaje y defina animaciones que la técnica de \emph{skinning} trasladará a la malla superficial según se define en \cite{thalmann88}. 
+La técnica se basa en una abstracción matemática, un esqueleto virtual, que se utiliza para definir los puntos de rotación de las \acl{joints} de los modelos. Este esqueleto se define como un conjunto de huesos virtuales jerarquizados y se encuentran conectados entre sí. La figura \ref{fig:virtualskeleton} muestra como un esqueleto virtual está superpuesto a un paciente virtual. Las esferas grises representan los centros de rotación de los \emph{\acs{joints}}, mientras que, los prismas representan la relación de herencia entre ellos. Estos huesos están pensados para que el artista dirija los movimientos del personaje y defina animaciones que la técnica de \emph{skinning} trasladará a la malla superficial según se define en \cite{thalmann88}. 
 
 \begin{figure}[h]
    \centering
@@ -62,6 +64,8 @@ Con el paso del tiempo, esta técnica ha sido divida en fases que ayudan a defin
 \end{itemize}
 
 A continuación, se mostrará la revisión de la literatura existente para cada etapa. Se hará especial mención a aquellas técnicas automáticas.
+
+
 \subsubsection{Rigging}
 \label{art:rigging}
 
@@ -112,14 +116,14 @@ Esta etapa es la que define como se transfieren los movimientos de los huesos vi
 
 \begin{equation}
 \label{eqn:skinning}
-v'_{i} = \sum_{j \in B} f(\theta_{j}w_{i,j}) v_{i}
+v'_{i} = \sum_{j \in B} w_{i,j}f(\theta_{j},v_{i}) 
 \end{equation}
-Esta ecuación define como calcular la nueva posición del vértice $v_{i}$ de la malla. $\theta$ representa el movimiento de cada hueso $j$ del conjunto de huesos $B$ y $w_{i,j}$ su peso asociado a ese vértice. De esta forma, la nueva posición del vértice se calcula en función de la influencia del movimiento de cada hueso.
+Esta ecuación determina como calcular la nueva posición del vértice $v'_{i}$ de la malla. $\theta$ representa el movimiento de cada hueso $j$ del conjunto de huesos $B$ y $w_{i,j}$ su peso asociado a ese vértice. De esta forma, la nueva posición del vértice se calcula en función de la influencia del movimiento de cada hueso.
 
 La técnica más habitual es \ac{LBS} presentada en \cite{thalmann88}, que se basa en calcular la nueva posición interpolando linealmente las matrices de transformación ($T$) de cada hueso virtual (Ec. \ref{eqn:LBS}).
 \begin{equation}
 \label{eqn:LBS}
-v'_{i} = (\sum_{j \in B} T_{j}w_{i,j}) v_{i}
+v'_{i} = \sum_{j \in B} w_{i,j}T_{j}v_{i}
 \end{equation}
 
 \ac{LBS} sufre problemas debido a que la interpolación de las rotaciones se realiza de manera lineal. Esto lleva asociado efectos no deseados como: el colapso de la malla  en rotaciones(\emph{collapsed elbow}) o en giros (\emph{candy wrapper}). En la literatura, se pueden encontrar numerosas propuestas \cite{rumman2016state} pero normalmente llevan asociadas un incremento del coste computacional, o la aparición de otros artefactos no deseados. Uno de los métodos más populares es la técnica propuesta por \emph{Kavan et al.} en \cite{Kavan2008}, llamada \ac{DQS}, que intenta solventar las limitaciones de \ac{LBS} al utilizar la interpolación de cuaterniones duales (Ec. \ref{eqn:DQS}). Además, esta técnica se caracteriza por ser computacionalmente equivalente a \ac{LBS}. Aunque \ac{DQS} funciona bien en la mayoría de los casos, en el algún escenario produce que la malla se deforme en exceso. Visualmente resulta en una ganancia de volumen significativa (\emph{bulging}). 
@@ -131,8 +135,8 @@ v'_{i} = (\sum_{j \in B} DQ_{j}w_{i,j}) v_{i}
 
 Otras soluciones se han presentado como \emph{Lee et al.}~\cite{Lee2013}, que describe una técnica que se encarga de resolver los problemas de \ac{DQS} cuando se realizan escalados y cizallados, movimientos muy habituales en cine de animación pero algo infrecuente en modelos anatómicos.
 
-En trabajos más recientes, \emph{Le y Hodgins}~\cite{le2016real} presentan una técnica que calcula unos nuevos \ac{COR} para cada vértice de la malla. Este enfoque solventa el problema de \emph{bulging} sin incrementar el coste computacional y no sufre del defecto \emph{candy wrapper}. El único inconveniente es la necesidad de un proceso previo para calcular todos esos nuevos centros.
-\todo{pongo el algoritmo de cor?}
+En trabajos más recientes, \emph{Le y Hodgins}~\cite{le2016real} presentan una técnica que calcula unos nuevos \acl{COR} para cada vértice de la malla. Este enfoque solventa el problema de \emph{bulging} sin incrementar el coste computacional y no sufre del defecto \emph{candy wrapper}. El único inconveniente es la necesidad de un proceso previo para calcular todos esos nuevos centros.
+%\todo{pongo el algoritmo de cor?}
 % \begin{eqnarray}
 % \label{eqn:COR}
 % R = normalize( w_{i,1}q_{1} + w_{i,2}q_{2} + . . . + w_{i,b}q_{b})\\
@@ -153,13 +157,13 @@ No es habitual que estos métodos tengan en cuenta la resolución contactos entr
 Esta etapa consiste en crear las animaciones  y los movimientos de los huesos virtuales que serán aplicadas a la malla superficial.   
 
 Al igual que etapas anteriores, es habitual que estas animaciones sean creadas por artistas profesionales. Con la ayuda de las herramientas \ac{CAD}, los animadores definen el movimiento de los huesos virtuales en fotogramas clave y el software calcula la interpolación de los fotogramas intermedios. Estas herramientas también incluyen algoritmos de cinemática inversa \cite{Shi:2007}, que permiten al usuario posicionar el actuador final (hueso situado en un nivel inferior de la jerarquía) y calcular la posición del resto de articulaciones superiores. 
-Adicionalmente, la técnica de \ac{MoCap} está muy presente en los estudios cinematográficos. Los movimientos realizados por un actor son capturados a través de unas balizas situadas en los trajes que se utilizan. Estos puntos característicos permiten el registro de la posición y rotación que serán trasladados al esqueleto virtual \cite{Menache:1999}. En contraste con las grandes producciones, es posible utilizar un \ac{tracker} como Microsoft Kinect, para la animación de personajes virtuales \cite{Liu:2018}.
+Además, la técnica de \ac{MoCap} está muy presente en los estudios cinematográficos. Los movimientos realizados por un actor son capturados a través de unas balizas situadas en los trajes que se utilizan. Estos puntos característicos permiten el registro de la posición y rotación que serán trasladados al esqueleto virtual \cite{Menache:1999}. En contraste con las grandes producciones, es posible utilizar un \ac{tracker} como Microsoft Kinect, para la animación de personajes virtuales \cite{Liu:2018}.
 
 
 \subsection{Animación basada en modelos físicos}
 \label{art:fisica}
 
-Alternativamente a los métodos geométricos, los algoritmos basados en modelos físicos buscan simular el comportamiento real. Desde el pionero trabajo de \emph{Terzopoulos et al.}\cite{terzopoulos1987elastically}, la simulación física ha tomado importancia para crear los efectos como la elasticidad de la piel, el comportamiento del tejido graso o el comportamiento de los músculos con el objetivo de generar animaciones que puedan ser usadas en cine, simuladores médicos o para el estudio de la biomecánica. 
+Alternativamente a los métodos geométricos, los algoritmos basados en modelos físicos buscan simular el comportamiento real. Desde el trabajo seminal de \emph{Terzopoulos et al.}\cite{terzopoulos1987elastically}, la simulación física ha tomado una enorme importancia para crear los efectos como la elasticidad de la piel, el comportamiento del tejido graso o el comportamiento de los músculos con el objetivo de generar animaciones que puedan ser usadas en cine, simuladores médicos o para el estudio de la biomecánica. 
 
 Inicialmente, se utilizaban métodos basados en la ley de elasticidad de \emph{Hooke} como se puede ver en los trabajos \cite{russell93,wilhelms1995modeling}, pero en la última década, han ido surgiendo cada vez más modelos biomecánicos y músculo-esquelético. Algunos de los modelos biomecánicos son creados manualmente para una parte específica de la anatomía humana ~\cite{Lee2009}. \emph{Patterson et al.} \cite{Patterson2012} consiguen simular el comportamiento muscular pero su técnica requiere de una etapa manual larga y tediosa, normalmente realizada por un experto. De manera similar, \emph{Fan et al.}~ \cite{Fan2014} describe una técnica capaz de simular el músculo preservando su volumen. El modelo anatómico puede ser generado a partir de imágenes médicas siempre y cuando se capturen del músculo relajado y la pose final. 
 

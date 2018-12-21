@@ -42,16 +42,15 @@ A continuación, se van a introducir brevemente los \ac{WP} 3, 4 y 5 y las tarea
 \begin{itemize}
 %\todo{Frase mal redactada.  No has hablado de la importancia de crear una base de datos de pacientes. Recuerda resaltar que no se buscan pacientes reales sino pacientes promedio con distinta variabilidad.}
     \item 
-    \new{
-El \ac{WP} 3 del proyecto \ac{RASimAs} tiene como objetivo crear la herramienta \ac{ITGVPH}: un conjunto de aplicaciones que servirá para generar una base de datos de \ac{VPH} con una gran variabilidad anatómica, adecuada para conseguir un entrenamiento con modelos tipo que serán utilizados en los dos prototipos. Además, permite que el modelo pueda ser adaptado a la postura que se requiera según el procedimiento que se esté realizando. Este paquete se ha dividido en las siguientes tareas (ver fig. \ref{fig:WP3}):}%Este paquete se divide en seis tareas lideradas por \ac{UKA-IMI}. }
+El \ac{WP} 3 del proyecto \ac{RASimAs} tiene como objetivo crear la herramienta \ac{ITGVPH}: un conjunto de aplicaciones que servirá para generar una base de datos de \ac{VPH} con una gran variabilidad anatómica, adecuada para conseguir un entrenamiento con modelos tipo que serán utilizados en los dos prototipos. Además, permite que el modelo pueda ser adaptado a la postura que se requiera según el procedimiento que se esté realizando. Este paquete se ha dividido en las siguientes tareas (ver fig. \ref{fig:WP3}):%Este paquete se divide en seis tareas lideradas por \ac{UKA-IMI}. }
 \begin{enumerate}
-    \item \new{\textbf{Adquisición de datos:} Análisis y recopilación de imágenes médicas que serán utilizadas para la creación de los \ac{VPH}}
-    \item \new{\textbf{Modelado anatómico:} Se realiza un registro entre las imágenes médicas y modelos anatómicos comerciales con el objetivo de generar nuevos modelos anatómicos.
-    Tanto la tarea anterior como esta fueron asignadas a \ac{UKA-IMI}}
-    \item \new{\textbf{Modelado mecánico:} Se generan los modelos mecánicos que se utilizarán en la simulación física del simulador. Este módulo ha sido asignado a \ac{INRIA}.}
-    \item \new{\textbf{Modelado fisiológico :} En esta tarea se modelará el comportamiento físico de los tejidos cuando los nervios son electroestimulados.
-    Tarea asignada a \ac{Bangor}}
-    \item \new{\textbf{Herramienta de posicionamiento de pacientes:} Este módulo permite adaptar la postura de los modelos anatómicos con todos sus tejidos asociados a la pose requerida por el simulador. Tarea desarrollada en \ac{URJC}, siendo la principal línea de investigación de la presente tesis. En esta tarea, se ha diseñado la aplicación \ac{TPTVPH} que será integrada dentro de la herramienta \ac{ITGVPH}}
+    \item \textbf{Adquisición de datos:} Análisis y recopilación de imágenes médicas que serán utilizadas para la creación de los \ac{VPH}
+    \item \textbf{Modelado anatómico:} Se realiza un registro entre las imágenes médicas y modelos anatómicos comerciales con el objetivo de generar nuevos modelos anatómicos.
+    Tanto la tarea anterior como esta fueron asignadas a \ac{UKA-IMI}
+    \item \textbf{Modelado mecánico:} Se generan los modelos mecánicos que se utilizarán en la simulación física del simulador. Este módulo ha sido asignado al \ac{INRIA}.
+    \item \textbf{Modelado fisiológico :} En esta tarea se modelará el comportamiento físico de los tejidos cuando los nervios son electroestimulados.
+    Tarea asignada a \ac{Bangor}
+    \item \textbf{Herramienta de posicionamiento de pacientes:} Este módulo permite adaptar la postura de los modelos anatómicos con todos sus tejidos asociados a la pose requerida por el simulador. Tarea desarrollada en \ac{URJC}, siendo la principal línea de investigación de la presente tesis. En esta tarea, se ha diseñado la aplicación \ac{TPTVPH} que será integrada dentro de la herramienta \ac{ITGVPH}
     \item \new{\textbf{Integración:}
     Esta tarea asignada a \ac{FORTH}, es la encargada de hacer la integración de todos los módulos anteriores en una única herramienta, ocultando los detalles técnicos a los futuros usuarios.}
 \end{enumerate}
@@ -63,38 +62,32 @@ El \ac{WP} 3 del proyecto \ac{RASimAs} tiene como objetivo crear la herramienta 
     \caption{ Diagrama que muestra la organización del \ac{WP} 3 }
   \label{fig:WP3}
 \end{figure}
-
-
 %Uno de los módulos clave es un posicionador \todo{no inventes palabras } de pacientes que sea capaz de deformar\todo{adaptar} modelos anatómicos que contengan todo tipo de tejidos \del{externos o internos} para adecuarlos a la posición requerida por el simulador.\todo{indicar cual es la pose de partida. No has dicho en ningún momento que se usan imagenes medicas en poses determinadas. No hables de pacientes reales, habla de imagenes medicas de pacientes reales}
  %\todo{indica el numero de la tarea y di que la lideró la URJC}
-
 \item
-\new{El \ac{WP} 4 consiste en el desarrollo de los componentes necesarios de los prototipos de \ac{RASimAs}. El \ac{RASim} (Tareas 1 a 4)  y el \ac{RAAs}(Tareas 5 y 6) se han dividido en las siguientes tareas:}
+El \ac{WP} 4 consiste en el desarrollo de los componentes necesarios de los prototipos de \ac{RASimAs}. El \ac{RASim} (Tareas 1 a 4)  y el \ac{RAAs}(Tareas 5 y 6) se han dividido en las siguientes tareas:
 
 \begin{enumerate}
-    \item \new{\textbf{Retroalimentación háptica:}
-    Desarrollo del algoritmo que permite devolver una respuesta háptica al dispositivo que simula la aguja. Esta tarea fue asignada a \ac{URJC}}
-    \item \new{\textbf{Simulación física:}
-    Este módulo desarrollado por \ac{INRIA} simula las deformaciones en los tejidos producidas por los instrumentos quirúrgicos.}
-    \item \new{\textbf{Simulación de \ac{US}:}
+    \item \textbf{Retroalimentación háptica:}
+    Desarrollo del algoritmo que permite devolver una respuesta háptica al dispositivo que simula la aguja. Esta tarea fue asignada a \ac{URJC}
+    \item \textbf{Simulación física:}
+    Este módulo desarrollado por \ac{INRIA} simula las deformaciones en los tejidos producidas por los instrumentos quirúrgicos.
+    \item \textbf{Simulación de \ac{US}:}
     La \ac{RWTH} era la encargada de desarrollar el módulo que simulaba la generación de la imagen de \ac{US}.
-    }
-    \item \new{\textbf{Plataforma de entrenamiento:}
+    \item \textbf{Plataforma de entrenamiento:}
     Esta aplicación se comunicaba con todos los módulos anteriores con el objetivo de proporcionar una aplicación de entrenamiento y autoevaluación. Esta tarea fue asignada a la \ac{URJC}, el cual representa uno de los casos de uso de esta tesis.
-    }
-    \item \new{\textbf{Modelado en tiempo real:} Perteneciente a \ac{RAAs}, esta tarea se basa en generar un modelo virtual a partir de las imágenes de \ac{US} que se obtienen del ecógrafo real.
-    }
-    \item \new{\textbf{Guiado en el procedimiento:}
+    \item \textbf{Modelado en tiempo real:} Perteneciente a \ac{RAAs}, esta tarea se basa en generar un modelo virtual a partir de las imágenes de \ac{US} que se obtienen del ecógrafo real.
+    \item \textbf{Guiado en el procedimiento:}
     El asistente proporcionará ayuda al anestesista durante la intervención, ya que el sistema tiene la posición de los instrumentos y la imagen de \ac{US}.
     Tanto la tarea anterior como esta fueron asignadas a \ac{SINTEF}.
-    }
 \end{enumerate}
-\new{La importancia de la plataforma de entrenamiento ha dado lugar a participar en las tareas 1, 2 y 3 debido a que el \ac{Courseware} se comunica y gestiona todos los módulos de \ac{RASim}.}
+
+La importancia de la plataforma de entrenamiento ha dado lugar a participar en las tareas 1, 2 y 3 debido a que el \ac{Courseware} se comunica y gestiona todos los módulos de \ac{RASim}.
 
 %\todo{Indica las tareas y en cuales has estado involucrado. Indicar cuales se han liderado.}
 
 \item
-\new{El \ac{WP} 5 se centra en el desarrollo los prototipos del simulador \ac{RASim} y el asistente \ac{RAAs}. El objetivo es crear los prototipos con intención de comprobar su validez en evaluaciones clínicas (\ac{WP} 6) con vistas a su posterior comercialización.}
+El \ac{WP} 5 se centra en el desarrollo los prototipos del simulador \ac{RASim} y el asistente \ac{RAAs}. El objetivo es crear los prototipos con intención de comprobar su validez en evaluaciones clínicas (\ac{WP} 6) con vistas a su posterior comercialización.
 \begin{itemize}
     \item \new{\textbf{Tareas 1 y 2: } Integración y construcción del prototipo \ac{RASim} a cargo de \ac{SG}. 
     }
