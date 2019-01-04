@@ -165,7 +165,7 @@ La técnica más habitual es \ac{LBS} presentada en \cite{thalmann88}, que se ba
 
 Otras soluciones se han presentado como \emph{Lee et al.}~\cite{Lee2013}, que describe una técnica que se encarga de resolver los problemas de \ac{DQS} cuando se realizan escalados y cizallados, movimientos muy habituales en cine de animación pero algo infrecuente en modelos anatómicos.
 
-En trabajos más recientes, \emph{Le y Hodgins}~\cite{le2016real} presentan una técnica que calcula unos nuevos \acl{COR} para cada vértice de la malla. Este enfoque solventa el problema de \emph{joint-bulging} sin incrementar el coste computacional y no sufre del defecto \emph{candy wrapper}. El único inconveniente es la necesidad de un proceso previo para calcular todos esos nuevos centros.
+En trabajos más recientes, \emph{Le y Hodgins}~\cite{le2016real} presentan una técnica que calcula unos nuevos \ac{COR} para cada vértice de la malla. Este enfoque solventa el problema de \emph{joint-bulging} sin incrementar el coste computacional y no sufre del defecto \emph{candy wrapper}. El único inconveniente es la necesidad de un proceso previo para calcular todos esos nuevos centros.
 %\todo{pongo el algoritmo de cor?}
 % \begin{eqnarray}
 % \label{eqn:COR}
@@ -175,12 +175,12 @@ En trabajos más recientes, \emph{Le y Hodgins}~\cite{le2016real} presentan una 
 % \end{eqnarray}
 
 %\todo{pongo imágenes de comparación?}
-En la figura \ref{fig:corexample} se puede observar una imagen extraída de \cite{le2016real}. En esta figura se muestran  una comparativa visual entre su método(\ac{COR}) y las dos técnicas clásicas más conocidas en la literatura, \ac{LBS} y \ac{DQS}. En cuanto a la rotación del codo, se aprecia que la articulación se colapsa (\emph{collapsing elbows}) en el caso de \ac{LBS}. En su lugar, la técnica \ac{DQS} produce un abultamiento (\emph{joint-bulging effect}), mientras que \ac{COR} resuelve ambos defectos. Respecto a los giros, es conocido que la técnica \ac{DQS} solventa el problema \emph{candy-wrapper} de \ac{LBS}. Se puede observar en las imágenes de la derecha que la técnica \ac{COR} solventa los efectos anteriormente mencionados (\emph{collapsing elbows}, \emph{joint-bulging} \emph{candy-wrapper}). 
+En la figura \ref{fig:corexample} se puede observar una imagen extraída de \cite{le2016real}. En esta figura se muestran  una comparativa visual entre su método \ac{COR} y las dos técnicas clásicas más conocidas en la literatura, \ac{LBS} y \ac{DQS}. En cuanto a la rotación del codo, se aprecia que la articulación se colapsa (\emph{collapsing elbows}) en el caso de \ac{LBS}. En su lugar, la técnica \ac{DQS} produce un abultamiento (\emph{joint-bulging effect}), mientras que \ac{COR} resuelve ambos defectos. Respecto a los giros, es conocido que la técnica \ac{DQS} solventa el problema \emph{candy-wrapper} de \ac{LBS}. Se puede observar en las imágenes de la derecha que la técnica \ac{COR} solventa los efectos anteriormente mencionados (\emph{collapsing elbows}, \emph{joint-bulging} \emph{candy-wrapper}). 
 
 \begin{figure*}[h]%[b]%[b!ht]
   \centering
   \includegraphics[width=0.90\textwidth]{IMG/corexample.png}
-    \caption{En la fila de arriba, se aprecia el comportamiento de las 3 técnicas frente a los giros. \ac{LBS} sufre \emph{candy-wrapper}, mientras las otras dos técnicas no. En la fila de abajo, se puede observar la rotación del codo. En este caso, \ac{LBS} sufre \emph{collapsing elbows}, \ac{DQS} se puede apreciar el efecto \emph{joint-bulging}, y el método \ac{COR} es robusto ante estos defectos. Imagen extraída de \cite{le2016real} }
+    \caption{En la fila de arriba, se aprecia el comportamiento de las 3 técnicas frente a los giros. \ac{LBS} sufre \emph{candy-wrapper}, mientras las otras dos técnicas no. En la fila de abajo, se puede observar la rotación del codo. En este caso, \ac{LBS} sufre \emph{collapsing elbows}, \ac{DQS} se puede apreciar el efecto \emph{joint-bulging}, y el método \acs{COR} es robusto ante estos defectos. Imagen extraída de \cite{le2016real} }
     \label{fig:corexample}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -188,7 +188,7 @@ En la figura \ref{fig:corexample} se puede observar una imagen extraída de \cit
 %
 No es habitual que estos métodos tengan en cuenta la resolución contactos entre vértices de la malla. En \cite{Vaillant:2014}, se propone una solución geométrica con tasas interactivas que puede solucionar las auto colisiones. \emph{Vaillant et al.} calculan un campo escalar para cada hueso. Los vértices serán influenciados por el valor de cada campo escalar. Sin embargo, ese método no está pensado para animar modelos que representen tejidos óseos. Estructuras rígidas como los huesos se ven afectados por una función de suavizado, que se traduce en deformaciones no realistas. %16k de vertices 50 fps nosotros 1.5kk
 
-Cuando se trata de animar modelos orgánicos, el uso de esqueletos virtuales, que solo se definen por rotaciones, presentan limitaciones al tener unos movimientos más complejos. Algunos trabajos intentan definir articulaciones basados en modelos anatómicos \cite{joints} con \emph{splines}\footnote{ Curva diferenciable definida en porciones mediante polinomios} mejorando así el movimiento del hueso, pero dificultando la creación del esqueleto virtual y el proceso de animación.
+Cuando se trata de animar modelos orgánicos, el uso de esqueletos virtuales, que solo se definen por rotaciones, presentan limitaciones al tener unos movimientos más complejos. Algunos trabajos intentan definir articulaciones basados en modelos anatómicos \cite{joints} con \emph{splines}\footnote{Curva diferenciable definida en porciones mediante polinomios} mejorando así el movimiento del hueso, pero dificultando la creación del esqueleto virtual y el proceso de animación.
 
 \subsubsection{Selección de poses} 
 \label{art:poses}
@@ -220,7 +220,7 @@ Se pueden encontrar artículos que combinan métodos kinemáticos y dinámicos c
 
 \emph{Kadlecek et al.}~\cite{kadlecek-16-reconstructing} presentan un método para crear modelos anatómicos listos para ser usados con algoritmos basados en físicas. A partir del trabajo de \emph{Dicko et al.}\cite{Ali2013} proponen un cauce automático de reconstrucción a través de múltiples capturas preservando la estructura ósea. Aun así, en ciertas ocasiones, los autores observaron que algunos huesos sobresalían entre los músculos. Se debe remarcar que, aunque esta técnica permite simular inercias y movimientos colaterales, este trabajo no permite tasas interactivas.   % En comparación con nuestro método, utilizan tetraedros que contienen más de un tejido, mientras en el algoritmo propuesto los tejidos óseos generan sus propios tetraedros que sirven de condición de contorno en el calculo de la etapa de pesado.
 
-\emph{Rumman and Fratarcangeli}~\cite{abu2015position} han propuesto un método inspirado en el algoritmo de deformación basado en el cálculo de las posiciones, omitiendo la velocidad y la aceleración (PBD Point-Based Dynamics \cite{Bender:2014}). Este trabajo permite animar cualquier personaje articulado gracias a la discretización del interior del modelo, permitiendo también animar los tejidos internos. Sin embargo, el alto coste computacional requiere de mallas en baja resolución para su ejecución con tasas de refresco asumibles en entornos interactivos.% tiempos interactivos.
+\emph{Rumman and Fratarcangeli}~\cite{abu2015position} han propuesto un método inspirado en el algoritmo de deformación basado en el cálculo de las posiciones, omitiendo la velocidad y la aceleración (Point-Based Dynamics \cite{Bender:2014}). Este trabajo permite animar cualquier personaje articulado gracias a la discretización del interior del modelo, permitiendo también animar los tejidos internos. Sin embargo, el alto coste computacional requiere de mallas en baja resolución para su ejecución con tasas de refresco asumibles en entornos interactivos.% tiempos interactivos.
 
 %se podría hablar de métodos basados en ejemplos 
 %tengo un par de surveys donde podría sacar más paper
