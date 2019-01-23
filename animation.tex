@@ -4,22 +4,22 @@
 
 %\subsection{Introducción}
 
-Una de las necesidades básicas que debe cubrir un simulador es poder mostrar información anatómica de pacientes virtuales con las que trabajará el usuario. En  \cite{preim2018survey} se explica la necesidad de que los estudiantes tengan un conocimiento profundo de la anatomía humana, estructuras, su posición relativa, variabilidad, etc. Es fundamental que un médico cuente con esos conocimientos previamente a la realización del entrenamiento médico.
+Una de las necesidades básicas que debe cubrir un simulador es poder mostrar información anatómica de pacientes virtuales con las que trabajará el usuario. En  \cite{preim2018survey} se explica la necesidad de que los estudiantes tengan un conocimiento profundo de la anatomía humana, estructuras, su posición relativa, variabilidad, etcétera. Es fundamental que un médico cuente con esos conocimientos previamente a la realización del entrenamiento médico.
 
-\new{Existen dos formas comúnmente utilizadas para representar modelos tridimensionales por computador. Tradicionalmente, se utiliza una malla compuesta por facetas poligonales 2D (triángulos o rectángulos) que representa solo la superficie o contorno del modelo sin tener en cuenta ninguna información interna. Estas representaciones se llaman comúnmente \acp{B-rep}. En el momento de \emph{renderizar} se proyecta la geometría y se calcula su iluminación sin interaccionar con el interior del modelo.}
+Existen dos formas comúnmente utilizadas para representar modelos tridimensionales por computador. Tradicionalmente, se utiliza una malla compuesta por facetas poligonales 2D (triángulos o rectángulos) que representa solo la superficie o contorno del modelo sin tener en cuenta ninguna información interna. Estas representaciones se llaman comúnmente \acp{B-rep}. En el momento de \emph{renderizar}, se proyecta la geometría y se calcula su iluminación sin interaccionar con el interior del modelo.
 % Lo más habitual es utilizar una malla poligonal que define la superficie o contorno del modelo que se representa. Estas mallas están normalmente compuesta por triángulos o rectángulos (quads), comúnmente llamadas \ac{B-rep}. Estas mallas son utilizadas para representar solo la superficie del modelo sin tener en cuenta ninguna información interna.  % \del{Esta malla generalmente está compuesta de polígonos llamados facetas o caras que son la unidad básica de un modelo tridimensional. Las caras más comunes son: triángulos, siendo este el polígono más simple; o rectángulos, que normalmente se descomponen en dos triángulos. El triángulo es la figura más utilizada debido a su menor complejidad matemática en los diferentes cálculos relacionados con la informática gráfica (interpolaciones, manejo de vecinos, etc.).}
 %A lo largo del tiempo, las tarjetas gráficas se han diseñado con especial énfasis en el tratamiento de triángulos.
 %Por otra parte, existe otro tipo de representación, llamada volumétrica, que permite una representación visual completa de un objeto tanto del exterior como del interior, que la representación poligonal no era capaz. Sin embargo, esto produce una gran complejidad al intentarlas \emph{renderizar} mediante técnicas de imagen generada por computador.
 
-\new{Por el contrario, 
-existe otro tipo de representaciones  llamadas volumétricas. Los objetos volumétricos pueden ser representados como una pila de imágenes 2D (\emph{stack} de imágenes), mallas de poliedros, o una imagen  tridimensional formada por \emph{vóxeles}. A la hora de \emph{renderizar} estas representaciones, existen una variedad de técnicas más complejas (p. ej. técnica ray casting \cite{isabel}) para \emph{renderizar} modelos volumétricos.}
+Por el contrario, 
+existe otro tipo de representaciones  llamadas volumétricas. Los objetos volumétricos pueden ser representados como una pila de imágenes 2D (\emph{stack} de imágenes), mallas de poliedros, o una imagen  tridimensional formada por \emph{vóxeles}. A la hora de \emph{renderizar} estas representaciones, existen una variedad de técnicas más complejas (p. ej. técnica ray casting \cite{isabel}) para \emph{renderizar} modelos volumétricos.
 
 
 En la figura \ref{fig:HVP} se puede apreciar dos \emph{renderizados} del mismo modelo anatómico.
 
 \begin{figure}[h]
    \centering
-    \includegraphics[width=0.5\textwidth]{IMG/volvsb-rep.png}
+    \includegraphics[width=0.8\textwidth]{IMG/volvsb-rep.png}
     \caption{La figura (a) muestra el \emph{renderizado} de la representación volumétrica del \emph{Visible Human Project}\cite{ackerman1998visible} mediante \emph{Ray-casting}. La figura (b) muestra el renderizado de la malla poligonal del mismo modelo. }
    \label{fig:HVP}
 \end{figure}
